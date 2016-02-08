@@ -1,0 +1,67 @@
+<header class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#sketch-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">{{ 'Toggle navigation' | t }}</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="sketch-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ '' | url }}"
+                           class="{% if template == 'pages/index.rain' %} active{% endif %}">{{ 'Home' | t }}</a></li>
+                    {% for category in shop.categories %}
+                        <li class="{% if category.subs %} sub{% endif %}">
+                            <a href="{{ category.url | url }}">{{ category.title }}</a>
+                            {% if category.subs %}
+                                <ul class="subnav">
+                                    {% for category in category.subs %}
+                                        <li class="{% if category.subs %} sub{% endif %}">
+                                            <a href="{{ category.url | url }}">{{ category.title }}</a>
+                                            {% if category.subs %}
+                                                <ul class="subnav subnav-two">
+                                                    {% for category in category.subs %}
+                                                        <li class="{% if category.subs %} sub{% endif %}">
+                                                            <a href="{{ category.url | url }}"
+                                                               title="{{ category.title }}">{{ category.title }}</a>
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            {% endif %}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                    <li class="{% if template == 'pages/brands.rain' %} active{% endif %}">
+                        <a href="{{ 'brands' | url }}">{{ 'Brands' | t }}</a>
+                    </li>
+                    {% if shop.blogs %}
+                        <li class="{% if template == 'pages/blog.rain' %}active{% endif %}">
+                            <a href="#">{{ 'Blog' | t }}</a>
+                            <ul class="subnav">
+                                {% for blog in shop.blogs %}
+                                    <li><a href="{{ blog.url | url }}">{{ blog.title }}</a>
+                                        <ul class="subnav subnav-two">
+                                            {% for article in blog.articles | limit(3) %}
+                                                <li>
+                                                    <a href="{{ article.url | url }}">{{ article.title }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

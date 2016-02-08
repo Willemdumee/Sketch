@@ -1,0 +1,14 @@
+{
+    "name": "CTRL/drifter",
+    "description": "Starter theme for Lightspeed, based on Draft",
+    "require": {
+        "twig/twig": "~1.24"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Willem Dumee",
+            "email": "willemdumee@gmail.com"
+        }
+    ]
+}

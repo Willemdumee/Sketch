@@ -1,0 +1,25 @@
+<img src="{{ 'logo.png' | url_asset }}" alt=""/>
+
+{% include 'snippets/headlines.rain' %}
+
+<h3>Categories</h3>
+<pre>
+    {{ dump(categories) }}
+</pre>
+
+<h3>Featured</h3>
+<pre>
+    {{ dump(featured) }}
+</pre>
+
+<h3>Newest</h3>
+<pre>
+    {{ dump(newest) }}
+</pre>
+
+<h3>Popular</h3>
+<pre>
+    {{ dump(popular) }}
+</pre>
+
+

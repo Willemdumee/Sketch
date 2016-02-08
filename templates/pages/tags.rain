@@ -1,0 +1,5 @@
+<h2>Tags</h2>
+
+<pre>
+    {{ dump(tags) }}
+</pre>

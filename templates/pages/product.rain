@@ -1,0 +1,5 @@
+<h2>Product</h2>
+
+<pre>
+    {{ dump(product) }}
+</pre>

@@ -1,0 +1,84 @@
+<!--
+
+* @package sketch
+* @author Willem Dumee
+* @version 0.1
+
+===================================================================
+  Lightspeed Theme Sketch by totalli t|m e-commerce
+  Visit http://www.totalli.nl for more themes and/or information on custom themes.
+===================================================================
+
+-->
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="{{ shop.language }}"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="{{ shop.language }}"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="{{ shop.language }}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="{{ shop.language }}"> <!--<![endif]-->
+<head>
+
+    {% if theme.favicon %}
+        <link rel="shortcut icon" href="{{ 'favicon.png' | url_asset }}" type="image/png"/>
+        <link rel="apple-touch-icon" href="{{ 'touchicon.png' | url_asset }}">
+        <link rel="icon" href="{{ 'favicon.ico' | url_asset }}">
+        <!--[if IE]>
+        <link rel="shortcut icon" href="{{ 'favicon.ico' | url_asset }}"><![endif]-->
+        <meta name="msapplication-TileColor" content="{{ theme.tilecolor }}">
+        <meta name="msapplication-TileImage" content="{{ 'tileicon.png' | url_asset }}">
+    {% endif %}
+
+    <title>
+        {{ page.title }}
+        {% if theme.shop_name_divider %} {{ theme.shop_name_divider }}
+        {% endif %}
+        {{ shop.name }}
+    </title>
+    <meta name="keywords" content="{{ shop.keywords }}"/>
+    <meta name="description" content="{{ shop.description }}">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="Stylesheet" href="{{ 'bootstrap.min.css' | url_asset }}" type="text/css"/>
+    <link rel="Stylesheet" href="{{ 'style.css' | url_asset }}" type="text/css"/>
+    <link rel="Stylesheet" href="{{ 'custom.css' | url_asset }}" type="text/css"/>
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="assets/style-ie.css"/>
+    <![endif]-->
+</head>
+
+<body>
+
+{% include 'snippets/header.rain' %}
+
+<div class="container content">
+
+    {% include template %}
+
+</div>
+
+<footer class="container">
+    <div class="row">
+        <div class="col-md-12">Footer Lightspeed --</div>
+    </div>
+</footer>
+
+{% include 'snippets/controller.rain' %}
+
+<script type="text/javascript" src="http://static.webshopapp.com/assets/jquery-1-9-1.js"></script>
+<script type="text/javascript" src="http://static.webshopapp.com/assets/jquery-ui-1-10-1.js"></script>
+<script type="text/javascript" src="http://static.webshopapp.com/assets/jquery-migrate-1-1-1.js"></script>
+
+<script type="text/javascript" src="assets/global.js"></script>
+<script src="assets/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<h2>collection</h2>
+
+<pre>
+    {{ dump(collection) }}
+</pre>
