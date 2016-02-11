@@ -15,10 +15,11 @@ Requirements
 Installation
 ==========
 
+- create a Lightspeed shop
 - Download package
 - run `composer install` in terminal
 - run `npm install --save-dev` in terminal
-- change config.php to connect a Lightspeed shop
+- change 'config-sample.php' to connect a Lightspeed shop and save it as 'config.php'
 - change gulpfile.js line 11 `proxy: localhost:80/sketch` to the base url
 - run `gulp` in terminal
 

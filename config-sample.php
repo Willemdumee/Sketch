@@ -11,8 +11,8 @@ define ( 'INDEX_PAGE', 'http://sketch.webshopapp.com/nl/' );
 define ( 'COLLECTION_PAGE', 'http://sketch.webshopapp.com/nl/mysketchcollection/' );
 define ( 'CATALOG_PAGE', 'http://sketch.webshopapp.com/nl/mysketchcatalog/' );
 define ( 'PRODUCT_PAGE', 'http://sketch.webshopapp.com/nl/mysketchproduct.html' );
-define ( 'BRANDS_PAGE', INDEX_PAGE . 'BRANDS/' );
-define ( 'TAGS_PAGE', INDEX_PAGE . 'TAGS/' );
+define ( 'BRANDS_PAGE', INDEX_PAGE . 'brands/' );
+define ( 'TAGS_PAGE', INDEX_PAGE . 'tags/' );
 define ( 'TEXTPAGE_PAGE', 'http://sketch.webshopapp.com/nl/service/mysketchpage/' );
 
 // the base url from where your website is visible in the browser
