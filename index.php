@@ -7,10 +7,12 @@
 
 require_once dirname( __FILE__ ) . '/config.php';
 require_once BASE_PATH . '/vendor/autoload.php';
+
 /* TODO add to autoload */
 require_once BASE_PATH . '/includes/DrifterTwigExtension.php';
 
-$loader = new Twig_Loader_Filesystem( 'templates', 'assets' );
+/* TODO create loader for stylesheets */
+$loader = new Twig_Loader_Filesystem( 'templates' );
 $twig   = new Twig_Environment( $loader, array(
     'debug' => true
 ) );

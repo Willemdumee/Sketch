@@ -66,11 +66,7 @@
 
 </div>
 
-<footer class="container">
-    <div class="row">
-        <div class="col-md-12">Footer Lightspeed --</div>
-    </div>
-</footer>
+{% include 'snippets/footer.rain' %}
 
 {% include 'snippets/controller.rain' %}
 
