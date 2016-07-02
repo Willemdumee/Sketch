@@ -62,6 +62,3 @@ if (isset( $_GET['template'] )) {
 $jsonTemplate = json_decode( $templateData, true );
 
 echo $template->render( $jsonTemplate );
-
-
-

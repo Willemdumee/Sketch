@@ -5,6 +5,7 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
+var flatten     = require('gulp-flatten');
 
 gulp.task('serve', function() {
     browserSync.init({
@@ -16,10 +17,10 @@ gulp.task('serve', function() {
     gulp.watch("templates/**/*.rain").on('change', browserSync.reload);
 });
 
-
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("assets/scss/*.scss")
+    return gulp.src("assets/scss/**/*.scss")
+        .pipe(flatten())
         .pipe(sass())
         .pipe(gulp.dest("assets"))
         .pipe(browserSync.stream());
