@@ -12,7 +12,7 @@ gulp.task('serve', function() {
           port: 3001
     });
 
-    gulp.watch("assets/scss/*.scss", ['sass']);
+    gulp.watch("assets/scss/**/*.scss", ['sass']);
     gulp.watch("templates/**/*.rain").on('change', browserSync.reload);
 });
 
@@ -26,8 +26,3 @@ gulp.task('sass', function() {
 });
 
 gulp.task('default', ['serve']);
-
-
-
-
-
