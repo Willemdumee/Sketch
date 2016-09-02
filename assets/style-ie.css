@@ -79,7 +79,7 @@ right: 16.666666666666664%;
 right: 8.333333333333332%;
 }
 .col-md-pull-0 {
-right: 0%;
+right: 0;
 }
 .col-md-push-12 {
 left: 100%;
@@ -118,7 +118,7 @@ left: 16.666666666666664%;
 left: 8.333333333333332%;
 }
 .col-md-push-0 {
-left: 0%;
+left: 0;
 }
 .col-md-offset-12 {
 margin-left: 100%;
@@ -157,5 +157,5 @@ margin-left: 16.666666666666664%;
 margin-left: 8.333333333333332%;
 }
 .col-md-offset-0 {
-margin-left: 0%;
+margin-left: 0;
 }

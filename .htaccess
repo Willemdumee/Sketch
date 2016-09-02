@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule    ^([A-Za-z0-9-]+)/?$    index.php?template=$1    [NC,L]    # Process parrots
+RewriteRule    ^([A-Za-z0-9-]+)/?$    index.php?template=$1    [NC,L]

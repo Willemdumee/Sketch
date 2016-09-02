@@ -1,4 +1,4 @@
 <h3>headlines</3>
-{<pre>
+<pre>
     {{ dump(headlines) }}
 </pre>

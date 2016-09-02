@@ -1,3 +1,8 @@
-body {
-{{ 'test' }}
-}
+{# for development purposes only! #}
+{# for production you can use e.g. 'theme.css.rain' file in your assets folder and include css rules below #}
+
+<style>
+    body {
+        background-color: {{ theme.background_color }};
+    }
+</style>

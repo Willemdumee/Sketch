@@ -2,7 +2,7 @@
 
 * @package sketch
 * @author Willem Dumee
-* @version 0.1
+* @version 0.2
 
 ===================================================================
   Lightspeed Theme Sketch by totalli t|m e-commerce
@@ -22,6 +22,7 @@
 <html lang="{{ shop.language }}"> <!--<![endif]-->
 <head>
 
+    {% include 'blocks/head.rain' %}
     {% if theme.favicon %}
         <link rel="shortcut icon" href="{{ 'favicon.png' | url_asset }}" type="image/png"/>
         <link rel="apple-touch-icon" href="{{ 'touchicon.png' | url_asset }}">
@@ -47,8 +48,18 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="Stylesheet" href="{{ 'bootstrap.min.css' | url_asset }}" type="text/css"/>
-    <link rel="Stylesheet" href="{{ 'style.css' | url_asset }}" type="text/css"/>
+    <link rel="Stylesheet" href="{{ 'bootstrap-min.css' | url_asset }}" type="text/css"/>
+    <link rel="Stylesheet" href="{{ 'style-min.css' | url_asset }}" type="text/css"/>
+
+    {% if development %}
+        {# only styles for development #}
+        <link rel="Stylesheet" href="{{ 'development-min.css' | url_asset }}" type="text/css"/>
+        {# css withvariables is in production included from assets folder #}
+        {% include 'css/themecss.rain' %}
+    {% else %}
+        <link rel="Stylesheet" href="{{ 'theme.css' | url_asset }}" type="text/css"/>
+    {% endif %}
+
     <link rel="Stylesheet" href="{{ 'custom.css' | url_asset }}" type="text/css"/>
 
     <!--[if lt IE 9]>
@@ -68,13 +79,19 @@
 
 {% include 'snippets/footer.rain' %}
 
-{% include 'snippets/controller.rain' %}
-
 <script type="text/javascript" src="http://static.webshopapp.com/assets/jquery-1-9-1.js"></script>
 <script type="text/javascript" src="http://static.webshopapp.com/assets/jquery-ui-1-10-1.js"></script>
 <script type="text/javascript" src="http://static.webshopapp.com/assets/jquery-migrate-1-1-1.js"></script>
 
-<script type="text/javascript" src="assets/global.js"></script>
-<script src="assets/bootstrap.min.js"></script>
+<script src="{{ 'bootstrap-min.js' | url_asset }}"></script>
+<script type="text/javascript" src="{{ 'main-min.js' | url_asset }}"></script>
+
+{# controller is only available on local environment #}
+{% if development %}
+    {% include 'snippets/controller.rain' %}
+{% endif %}
+
+{% include 'blocks/body.rain' %}
+
 </body>
 </html>

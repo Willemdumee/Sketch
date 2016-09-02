@@ -1,4 +1,45 @@
+<ul class="template-editor">
+    <li>
+        {% for key, value in controller %}
+            <a href="" {% if value is iterable %}class="block"{% endif %}>{{ key }}:</a>
+            {% if value is iterable %}
+                <ul>
+                    {% for subkey, subvalue in value %}
+                        <li>
+                            <a href="">{{ subkey }}:</a>
+                            {% if subvalue is iterable %}
+                                <ul>
+                                    {% for key, value in subvalue %}
+                                        <li>{{ key }}:
+                                            {% if value is iterable %}
+                                                <ul>
+                                                    {% for subkey, subvalue in value %}
+                                                    <li>
+                                                        <a href="">{{ subkey }}</a>: {{ subvalue }}
+                                                    </li>
+                                                    {%  endfor %}
+                                                </ul>
+                                            {% else %}
+                                                {{ value }}
+                                            {% endif %}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                {{ subvalue }}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                {{ value }} <br />
+            {% endif %}
+        {% endfor %}
+
+    </li>
+</ul>
 <div class="controller">
+    <button>variables</button>
     <a href="home">index</a>
     <a href="collection">collection</a>
     <a href="catalog">catalog</a>
@@ -7,3 +48,12 @@
     <a href="tags">tags</a>
     <a href="textpage">textpage</a>
 </div>
+<script>
+    $('.controller button').on('click', function() {
+       $('.template-editor').toggleClass('show');
+    });
+    $('.template-editor a').on('click', function(e) {
+        e.preventDefault();
+        $(this).next('ul').toggleClass('show');
+    })
+</script>

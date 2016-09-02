@@ -16,7 +16,7 @@
                     <li><a href="{{ '' | url }}"
                            class="{% if template == 'pages/index.rain' %} active{% endif %}">{{ 'Home' | t }}</a></li>
                     {% for category in shop.categories %}
-                        <li class="{% if category.subs %} sub{% endif %}">
+                        <li class="{% if category.subs %} sub{% endif %}{% if category.url is active %} active{% endif %}">
                             <a href="{{ category.url | url }}">{{ category.title }}</a>
                             {% if category.subs %}
                                 <ul class="subnav">

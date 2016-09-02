@@ -1,22 +1,19 @@
 .controller {
   position: fixed;
   bottom: 0;
-  width:100%;
-  //height: 25px;
+  width: 100%;
   background: #f1f1f1;
-  padding:3px 0 0 25px;
-  font-size: 14px;
-  a {
+  padding: 3px 0 0 25px;
+  font-size: 14px; }
+  .controller a {
     line-height: 30px;
     display: inline-block;
     margin-left: 25px;
-    width: 10%;
-  }
-  button {
+    width: 10%; }
+  .controller button {
     border: none;
-    background-color: transparent;
-  }
-}
+    background-color: transparent; }
+
 .template-editor {
   border: 1px solid #f1f1f2;
   overflow-x: scroll;
@@ -28,14 +25,10 @@
   position: fixed;
   bottom: 0px;
   background: #fff;
-  font-size: 11px;
-  li {
-    .block {
-      display: block;
-    }
-    float: none;
-    ul {
-      display: none;
-    }
-  }
-}
+  font-size: 11px; }
+  .template-editor li {
+    float: none; }
+    .template-editor li .block {
+      display: block; }
+    .template-editor li ul {
+      display: none; }
