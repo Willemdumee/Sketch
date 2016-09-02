@@ -15,15 +15,28 @@ Requirements
 Installation
 ==========
 
-- create a Lightspeed shop
-- Download package
-- run `composer install` in terminal
-- run `npm install --save-dev` in terminal
-- change 'config-sample.php' to connect a Lightspeed shop and save it as 'config.php'
-- change gulpfile.js line 11 `proxy: localhost:80/sketch` to the base url
-- run `gulp` in terminal
+- fire up your webserver
+- Create a folder that is accessible by your webserver
+- Download Sketch `git clone https://github.com/Willemdumee/Sketch.git .` 
+- Run `composer install` in terminal
+- Run `npm install` in terminal
+- Define 'base url' inside 'config.php' (e.g. http://localhost/myawesomeshop)
+- Change gulpfile.js line 19 `proxy: localhost:80/sketch` to the base url which you also defined above
+- Run `gulp` in terminal
 
-To use browsersync: open url in browser with portnumber 3001 ( e.g. localhost:3001/sketch )
+In order to use browsersync: open url in browser with portnumber 3001 ( e.g. localhost:3001/sketch )
+
+
+Connect to your own Lightspeed shop
+==========
+
+- Create a Lightspeed shop (and create at least 1 product, 1 collection, 1 category, 1 product, 1 brand, 1 tag and 1 text page)
+- Change 'config.php' to connect a Lightspeed shop. You should modify the urls to
+* Index page
+* Collection page
+* Category page
+* Product page
+* Text page 
 
 License
 ==========
