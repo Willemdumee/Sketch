@@ -31,7 +31,7 @@ Connect to your own Lightspeed shop
 ==========
 
 - Create a Lightspeed shop (and create at least 1 product, 1 collection, 1 category, 1 product, 1 brand, 1 tag and 1 text page)
-- Change 'config.php' to connect a Lightspeed shop. You should define urls to
+- Change 'config.php' to connect to your Lightspeed shop. You should define urls to
   * Index page
   * Collection page
   * Category page
