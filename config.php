@@ -6,7 +6,7 @@
  */
 
 // hook up with a live demo shop
-define ( 'SHOP_ID', '12345');
+define ( 'SHOP_ID', '172820');
 define ( 'INDEX_PAGE', 'http://sketch.webshopapp.com/en/' );
 define ( 'COLLECTION_PAGE', 'http://sketch.webshopapp.com/en/pop-rock/' );
 define ( 'CATALOG_PAGE', 'http://sketch.webshopapp.com/en/alternative-rock/' );
