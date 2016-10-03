@@ -8,7 +8,7 @@ Requirements
 ==========
 
 - Composer
-- PHPserver
+- PHPserver  : The router currently only works with Apache. You can port the apache rules to Nginx in the location block (will provide snippet for it soon)
 - Node.js
 - Gulp
 
@@ -31,12 +31,8 @@ Connect to your own Lightspeed shop
 ==========
 
 - Create a Lightspeed shop (and create at least 1 product, 1 collection, 1 category, 1 product, 1 brand, 1 tag and 1 text page)
-- Change 'config.php' to connect to your Lightspeed shop. You should define urls to
+- Change 'config.php' to connect to your Lightspeed shop. You should define the url to
   * Index page
-  * Collection page
-  * Category page
-  * Product page
-  * Text page 
 
 License
 ==========
