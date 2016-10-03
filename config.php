@@ -8,12 +8,6 @@
 // hook up with a live demo shop
 define ( 'SHOP_ID', '172820');
 define ( 'INDEX_PAGE', 'http://sketch.webshopapp.com/en/' );
-define ( 'COLLECTION_PAGE', 'http://sketch.webshopapp.com/en/pop-rock/' );
-define ( 'CATALOG_PAGE', 'http://sketch.webshopapp.com/en/alternative-rock/' );
-define ( 'PRODUCT_PAGE', 'http://sketch.webshopapp.com/en/alternative-rock/grunge/' );
-define ( 'BRANDS_PAGE', INDEX_PAGE . 'brands/' );
-define ( 'TAGS_PAGE', INDEX_PAGE . 'tags/' );
-define ( 'TEXTPAGE_PAGE', 'http://sketch.webshopapp.com/en/service/about/' );
 
 // the base url from where your website is visible in the browser
 define( 'BASE_URL', 'http://localhost/sketch/' );

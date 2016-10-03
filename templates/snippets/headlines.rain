@@ -1,4 +1,3 @@
-<h3>headlines</3>
-<pre>
-    {{ dump(headlines) }}
-</pre>
+{% if headlines %}
+    <img class="img-responsive" src="{{ headlines[0].image | url_image( '', headlines[0].title )}}" title="{{ headlines[0].title }}" alt="{{ headlines[0].title }}"/>
+{% endif %}

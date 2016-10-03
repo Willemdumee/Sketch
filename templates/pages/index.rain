@@ -21,4 +21,3 @@
 <pre>
     {{ dump(popular) }}
 </pre>
-

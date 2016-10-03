@@ -40,13 +40,6 @@
 </ul>
 <div class="controller">
     <button>variables</button>
-    <a href="home">index</a>
-    <a href="collection">collection</a>
-    <a href="catalog">catalog</a>
-    <a href="product">product</a>
-    <a href="brands">brands</a>
-    <a href="tags">tags</a>
-    <a href="textpage">textpage</a>
 </div>
 <script>
     $('.controller button').on('click', function() {
