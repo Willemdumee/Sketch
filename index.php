@@ -5,11 +5,14 @@
  * @version 0.2
  */
 
+require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+require_once dirname( __FILE__ ) . '/includes/Helpers.php';
+require_once dirname( __FILE__ ) . '/includes/DrifterTwigExtension.php';
+
 require_once dirname( __FILE__ ) . '/config.php';
-require_once BASE_PATH . '/vendor/autoload.php';
+
 
 /* TODO add to autoload */
-require_once BASE_PATH . '/includes/DrifterTwigExtension.php';
 
 /* TODO create loader for stylesheets */
 $loader = new Twig_Loader_Filesystem( 'templates' );
@@ -42,7 +45,6 @@ if ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] != 'off' ) {
 $uri = '';
 if ( isset( $_GET['path'] ) ) {
 	$uri = $_GET['path'];
-
 }
 
 $templateData = file_get_contents( INDEX_PAGE . $uri . '?format=json' );
