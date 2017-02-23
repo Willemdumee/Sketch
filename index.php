@@ -39,7 +39,7 @@ if ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] != 'off' ) {
 	$protocol = 'https://';
 }
 
-$url = '';
+$uri = '';
 if ( isset( $_GET['path'] ) ) {
 	$uri = $_GET['path'];
 
